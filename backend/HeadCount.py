@@ -23,10 +23,13 @@ def clear_table():
 def get_number_of_heads():
 
     return cursor.rowcount
-@pytest.fixture
-def Testcoordinate(x, y):
 
-    assert x >= 0 and y >= 0
+
+class TestDir(unittest.TestCase):
+
+    def test_coordinate(self):
+
+        assert 1 >= 0
 
 
 
@@ -35,4 +38,4 @@ if __name__ == "__main__":
     #y = 0
     #insert_coordinate(x, y)
     #clear_table()
-    Testcoordinate(1, 1)
+    print("ok")
