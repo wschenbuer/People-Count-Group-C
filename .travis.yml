@@ -15,5 +15,5 @@ addons:
     - mysql-client-5.6
 before_script:
 - mysql -u root -e 'CREATE DATABASE pythonDB;'
-- mysql -u root -e "CREATE USER 'chen'@'localhost' IDENTIFIED BY 'chen123';"
-- mysql -u root -e "GRANT ALL ON pythonDB.* TO 'chen'@'localhost';"
+- mysql -u root -e "CREATE USER 'root'@'127.0.0.1' IDENTIFIED BY 'huawei123';"
+- mysql -u root -e "GRANT ALL ON pythonDB.* TO 'root'@'127.0.0.1';"
