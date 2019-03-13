@@ -24,7 +24,7 @@ def get_number_of_heads():
 
     return cursor.rowcount
 @pytest.fixture
-def test_coordinate(x, y):
+def Testcoordinate(x, y):
 
     assert x >= 0 and y >= 0
 
@@ -35,4 +35,4 @@ if __name__ == "__main__":
     #y = 0
     #insert_coordinate(x, y)
     #clear_table()
-    test_coordinate(1, 1)
+    Testcoordinate(1, 1)
