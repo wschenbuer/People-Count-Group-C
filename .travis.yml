@@ -5,3 +5,16 @@ install:
   - pip install pytest
 script: pytest backend/HeadCount.py
 service: mysql
+addons:
+  apt:
+    sources:
+      - mysql-5.7-trusty
+    packages:
+      - mysql-server
+
+dist: trusty
+
+sudo: required
+
+before_script:
+  - mysql -e 'create database points;'
