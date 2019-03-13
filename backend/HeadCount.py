@@ -1,9 +1,10 @@
 import mysql.connector
+import pytest
+import unittest
 
-
-mydb = mysql.connector.connect(user='root', password= 'huawei123', host='127.0.0.1', database = 'pythonDB')
+mydb = mysql.connector.connect(user='root', password='huawei123', host='127.0.0.1', database='pythonDB')
 cursor = mydb.cursor()
-# cursor.execute("CREATE TABLE points (XCoordinate INT(5), YCoordinate INT(5))")  
+# cursor.execute("CREATE TABLE points (XCoordinate INT(5), YCoordinate INT(5))")
 
 
 def insert_coordinate(x, y):
@@ -23,8 +24,15 @@ def get_number_of_heads():
 
     return cursor.rowcount
 
+def test_coordinate(x, y):
+
+    assert x >= 0 and y >= 0
+
+
+
 if __name__ == "__main__":
     #x = 0
     #y = 0
     #insert_coordinate(x, y)
-    clear_table()
+    #clear_table()
+    test_coordinate(1, 1)
