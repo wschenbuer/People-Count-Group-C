@@ -3,7 +3,7 @@ import mysql.connector
 
 mydb = mysql.connector.connect(user='root', password= 'huawei123', host='127.0.0.1', database = 'pythonDB')
 cursor = mydb.cursor()
-# cursor.execute("CREATE TABLE points (XCoordinate INT(5), YCoordinate INT(5))")
+# cursor.execute("CREATE TABLE points (XCoordinate INT(5), YCoordinate INT(5))")  
 
 
 def insert_coordinate(x, y):
