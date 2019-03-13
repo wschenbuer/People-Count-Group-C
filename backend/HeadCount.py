@@ -23,7 +23,7 @@ def clear_table():
 def get_number_of_heads():
 
     return cursor.rowcount
-
+@pytest.fixture
 def test_coordinate(x, y):
 
     assert x >= 0 and y >= 0
