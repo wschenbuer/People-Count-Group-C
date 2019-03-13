@@ -5,16 +5,15 @@ install:
   - pip install pytest
 script: pytest backend/HeadCount.py
 service: mysql
+dist: trusty
+sudo: required
 addons:
   apt:
-    sources:
-      - mysql-5.7-trusty
     packages:
-      - mysql-server
-
-dist: trusty
-
-sudo: required
-
+    - mysql-server-5.6
+    - mysql-client-core-5.6
+    - mysql-client-5.6
 before_script:
-  - mysql -e 'create database points;'
+- mysql -u root -e 'CREATE DATABASE points;'
+- mysql -u root -e "CREATE USER 'buer'@'localhost' IDENTIFIED BY 'buer';"
+- mysql -u root -e "GRANT ALL ON stockmarket.* TO 'buer'@'localhost';"
