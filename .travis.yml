@@ -16,4 +16,4 @@ addons:
 before_script:
 - mysql -u root -e 'CREATE DATABASE points;'
 - mysql -u root -e "CREATE USER 'root'@'127.0.0.1' IDENTIFIED BY 'PASSWORD';"
-- mysql -u root -e "GRANT ALL ON stockmarket.* TO 'root'@'localhost';"
+- mysql -u root -e "GRANT ALL ON stockmarket.* TO 'root'@'127.0.0.1';"
