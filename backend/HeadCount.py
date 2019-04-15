@@ -4,7 +4,7 @@ import unittest
 
 mydb = mysql.connector.connect(user='chen', password='chen123', host='localhost', database='pythonDB')
 cursor = mydb.cursor()
-# cursor.execute("CREATE TABLE points (XCoordinate INT(5), YCoordinate INT(5))")
+cursor.execute("CREATE TABLE points (XCoordinate INT(5), YCoordinate INT(5))")
 
 
 def insert_coordinate(x, y):
